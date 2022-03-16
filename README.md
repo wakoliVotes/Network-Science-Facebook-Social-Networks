@@ -1,4 +1,8 @@
-# Network-Science-Facebook-Social-Networks
+## Network-Science-Facebook-Social-Networks
+### Table of Contents
+- [Project Overview](#project-overview)
+- [Graph Representations](#graph-representations)
+- [Conclusion](#conclusion)
 ### Project Overview
 
 - The project focuses on Facebook connections
@@ -7,6 +11,8 @@
 - Nodes represent Official Facebook Pages while the Links/Edges are mutual likes between sites
 - Facebook ids with similar likes in Column1 are matched with Facebook ids with similar likes in column 2
 - See dataset used on **[Kaggle Database](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)**
+
+### Graph Representations
 
 
 ### Conclusion
