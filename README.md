@@ -16,5 +16,4 @@
 
 
 ### Conclusion
-- The network representation is based on previously collected data **[Facebook Large Page-Page Network Data Set](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)** uploaded by **Ishan Dutta**
-
+- The network representation is based on past data **[Facebook Large Page-Page Network Data Set](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)** uploaded by **Ishan Dutta**
