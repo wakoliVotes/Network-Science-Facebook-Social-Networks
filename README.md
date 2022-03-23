@@ -121,6 +121,65 @@ NodeView((
 15172, 15129, 15026, 14971, 14944, 14862, 14840, 14832, 14791, 14790, 14768, 14666, 34, 14650, 14628, 14597, 14547, 9, 14497,
 14467, 14454, 14409, 14392, 14344, 14332, 14248, 14241, 8, 14205, 14179, 14164))
 ```
+- Now, we need to visualize the Graph 'Gs', with the help of **matplotlib.pyplot** Python library
+```py
+from matplotlib.pyplot import figure
+figure(figsize=(100, 100))                                    # Specifying the figure size
+nx.draw_shell(GS,  with_labels=True, node_color='red')
+```
+<div align="center">
+  
+  ![image](https://user-images.githubusercontent.com/77758884/159599622-70953b15-c52f-4e0c-8470-70524e705a1e.png)
+ 
+</div>
+
+- To get a better view of the connections, we can modify the graph's outlok by choosing the **draw_networkx** option
+```py
+from matplotlib.pyplot import figure
+figure(figsize=(50, 50))                                    # Specifying the figure size
+nx.draw_networkx(GS,  with_labels=True, node_color='red')
+```
+![image](https://user-images.githubusercontent.com/77758884/159599897-b6ca053a-fb78-4fd2-be79-e1969371a16e.png)
+
+### PART 4: Degree
+- Next, we also created another dataframe that shows the nodes and their number of connections.
+- Using online resources, the following scripts helped depict the nodes and number of connections on each
+```py
+connectionsBoard = {}
+for x in GS.nodes:
+    connectionsBoard[x] = len(GS[x])
+s = pd.Series(connectionsBoard, name='Connections')
+connectionDataframe = s.to_frame().sort_values('Connections', ascending = False)
+```
+- We can get an overview of the connections as shown below:
+```
+```py
+connectionDataframe.head(22)
+
+14	18
+32	17
+1	17
+4	14
+18	14
+26	12
+5	12
+22	10
+37	8
+29	8
+6	7
+19	5
+39	5
+12	4
+3	4
+2	4
+31	4
+38	3
+13	3
+30	3
+28	3
+11	2
+18024	2
+```
 
 ### Conclusion
 - The network representation is based on past data **[Facebook Large Page-Page Network Data Set](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)** uploaded by **Ishan Dutta**
