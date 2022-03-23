@@ -1,7 +1,10 @@
 ## Network-Science-Facebook-Social-Networks
 ### Table of Contents
 - [Project Overview](#project-overview)
-- [Graph Representations](#graph-representations)
+- [PART 1: Getting Our Project Data Ready](#part-1-getting-our-project-data-ready)
+- [PART 2: Graph Representations](#part-2-graph-representations)
+- [PART 3: Making Adjustments](#part-3-making-adjustments)
+- [PART 4: Degree](#part-4-degree)
 - [Conclusion](#conclusion)
 ### Project Overview
 
@@ -27,7 +30,7 @@ mydata.head
 <img width="400" height="250" src="https://user-images.githubusercontent.com/77758884/159596832-3c7486bb-b02b-4907-b029-15c3d8a14f43.png" >
 
 
-### Graph Representations
+### PART 2: Graph Representations
 ```py
 
 # First, we created the World into which the Graph will exist
@@ -96,7 +99,7 @@ Facebook_id_1	Facebook_id_2
 13	37	22177
 14	1	22171
 ```
-### Creating new graph GS that will form the world for the connections
+- Creating new graph **GS** that will form the world for the connections
 ​
 ```py
 import networkx as nx
@@ -152,7 +155,6 @@ s = pd.Series(connectionsBoard, name='Connections')
 connectionDataframe = s.to_frame().sort_values('Connections', ascending = False)
 ```
 - We can get an overview of the connections as shown below:
-```
 ```py
 connectionDataframe.head(22)
 
@@ -179,7 +181,17 @@ connectionDataframe.head(22)
 28	3
 11	2
 18024	2
+
 ```
+- From the information above, person 14 (node 14) has the largest connections[links], and hence highest degree
+- This is also evident as shown in the network connection representation/graph above, with a snippet below:
+
+<div align="center"
+     
+![image](https://user-images.githubusercontent.com/77758884/159600488-8502a97c-8853-4e9c-8ffb-3e2e78f93811.png)
+     
+</div>
 
 ### Conclusion
-- The network representation is based on past data **[Facebook Large Page-Page Network Data Set](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)** uploaded by **Ishan Dutta**
+- Using past **[Data](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)**, it was possible to visualize the Facebook connections
+- The main **Python** libraries and packages used were **networkx, pandas and matplotlib**
