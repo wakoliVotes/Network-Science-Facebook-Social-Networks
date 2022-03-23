@@ -23,12 +23,33 @@
 
 import pandas as pd
 mydata = pd.read_csv(r"D:\KCA\Network Science\Facebook_Network_Edges.csv")
+```
+- We are interested to show connections between the FaceBook pages and other Pages
+- Hence, we need to trim the dataframe into needed columns and store in new dataframe for manipulation
+- In this case, from our dataframe above, we have, 'facebook_id_1', 'facebook_id_2'
+- We created a new dataframe, so that in case of any changes, the original remains intact
+
+```py
+
+mydata1 = mydata[['Facebook_id_1', 'Facebook_id_2']]
 # Overview of the Data Frame
 mydata.head
 
-```
-<img width="400" height="250" src="https://user-images.githubusercontent.com/77758884/159596832-3c7486bb-b02b-4907-b029-15c3d8a14f43.png" >
+<bound method NDFrame.head of         Facebook_id_1  Facebook_id_2
+0                   0          18427
+1                   1          21708
+2                   1          22208
+3                   1          22171
+4                   1           6829
+...               ...            ...
+170997          20188          20188
+170998          22340          22383
+170999          22348          22348
+171000           5563           5563
+171001          22425          22425
 
+[171002 rows x 2 columns]>
+```
 
 ### PART 2: Graph Representations
 ```py
@@ -195,3 +216,4 @@ connectionDataframe.head(22)
 ### Conclusion
 - Using past **[Data](https://www.kaggle.com/ishandutta/facebook-large-pagepage-network-data-set)**, it was possible to visualize the Facebook connections
 - The main **Python** libraries and packages used were **networkx, pandas and matplotlib**
+- As shown with the **Facebook** network, people have varying connections with varied degrees based on their links
